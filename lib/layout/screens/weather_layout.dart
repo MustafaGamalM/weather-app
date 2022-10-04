@@ -13,10 +13,6 @@ class WeatherLayout extends StatelessWidget {
     return BlocConsumer<WeatherCubitCubit, WeatherCubitState>(
       listener: (context, state) {
         if (state is GetWeatherCurrentErrorState) {
-          BlocProvider.of<WeatherCubitCubit>(context)
-              .getCurrentWeather(country: 'alex');
-          BlocProvider.of<WeatherCubitCubit>(context)
-              .getLastWeatherData(country: 'alex');
           dialogBuilder(context, textFormField);
         }
       },
